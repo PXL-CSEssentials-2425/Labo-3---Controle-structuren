@@ -1,6 +1,7 @@
 # Labo 3: Controle structuren
 
 ![afbeelding](media/knightsvsgoblins.png)
+
 We gaan een applicatie maken waarin de speler als ridder tegen een goblin moet vechten. 
 
 
