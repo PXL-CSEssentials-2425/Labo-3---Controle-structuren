@@ -10,7 +10,7 @@ We starten met een controle te implementeren die kijkt of de speler nog leeft.
  - Declareer en initialiseer een waarde knightHealth (0) en goblinHealth (20).
  - Indien de levenspunten van de speler (knightHealth) kleiner of gelijk zijn aan nul, dan toon je aan de speler dat hij/zij is gestorven. 
  - Doe hetzelfde voor de goblin.
- - *Extra: gebruik de Random klasse om de levenspuntenvan de ridder en goblin in te stellen.*
+ - *Extra: gebruik de Random klasse om de levenspunten van de ridder en goblin in te stellen.*
 
 ## Deel 2
  - Indien de speler niet gestorven is, dan druk je af hoeveel levenspunten (knightHealth) speler nog heeft. Gebruik hier else voor.
