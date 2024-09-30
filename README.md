@@ -34,3 +34,6 @@ Gebruik een for lus, zodat de speler exact 4 keer een actie kan selecteren.
 
 ## Deel 5
 Vervang de for lus door een while lus die vraagt aan de speler om een actie uit te voeren zolang als de ridder of goblin nog leeft.
+
+## Voorbeeld
+![afbeelding](media/console.png)
