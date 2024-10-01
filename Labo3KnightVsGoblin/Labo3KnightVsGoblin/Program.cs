@@ -1,4 +1,11 @@
-﻿/* 
+Console.WriteLine(@"
+           /\                Knight VS Goblin                 /\
+ _         )( _____________________    ______________________ )(         _
+(_)///////(**)_____________________>  <______________________(**)\\\\\\\(_)
+           )(                                                 )(
+           \/                                                 \/");
+
+/* 
  * Deel 1
  * 
  * We gaan een applicatie maken waarin de speler als ridder tegen een goblin moet vechten.
