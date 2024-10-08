@@ -1,22 +1,17 @@
-Random randomNumberGenerator = new Random();
-
-int knightHealth;
-int goblinHealth = randomNumberGenerator.Next(1, 101);
-int knightAttack = 10;
-int goblinAttack;
-
 Console.WriteLine(@"
            /\                Knight VS Goblin                 /\
  _         )( _____________________    ______________________ )(         _
 (_)///////(**)_____________________>  <______________________(**)\\\\\\\(_)
            )(                                                 )(
            \/                                                 \/");
-
 Console.WriteLine();
 Console.WriteLine("===========================================================================");
 Console.WriteLine();
+
+Random randomNumberGenerator = new Random();
+
 Console.Write("Enter the health points for your knight: ");
-if (int.TryParse(Console.ReadLine(), out knightHealth))
+if (int.TryParse(Console.ReadLine(), out int knightHealth))
 {
     if (knightHealth < 0 || knightHealth > 100)
     {
@@ -30,18 +25,28 @@ else
     knightHealth = 100;
 }
 
+int goblinHealth = randomNumberGenerator.Next(1, 101);
+
 // Deel 4: 4 attempts
 //for(int attempt = 1; attempt <= 4; attempt++)
 //{
 
 // Deel 5: loop while knight AND goblin are alive, stop when one of them is dead
+int round = 1;
 do
 {
-    goblinAttack = randomNumberGenerator.Next(5, 16);
+    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+    Console.WriteLine($"--->>> Round {round}... fight! <<<---");
+    Console.WriteLine();
+    Console.ResetColor();
+
+    int knightAttack = randomNumberGenerator.Next(10, 26);
+    int goblinAttack = randomNumberGenerator.Next(5, 16);
 
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine($"Knight health: {knightHealth}");
     Console.WriteLine($"Goblin health: {goblinHealth}");
+    Console.WriteLine();
     Console.ResetColor();
 
     Console.WriteLine("Choose your next move carefully:");
@@ -77,8 +82,10 @@ do
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine($"You were attacked by the goblin for {goblinAttack} damage!");
         Console.ResetColor();
-    }    
-} while (knightHealth > 0 && goblinHealth > 0);
+    }
+    Console.WriteLine();
+    round++;
+} while (knightHealth > 0 && goblinHealth > 0); //repeat while both knight and goblin are alive
 
 if (goblinHealth <= 0)
 {
